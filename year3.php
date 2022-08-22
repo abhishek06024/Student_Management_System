@@ -58,7 +58,7 @@ justify-content: center;
     </style>
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <div class="mid">
             <ul class="navbar">
                <li><a href="home.php">Student Record</a></li>
@@ -68,21 +68,24 @@ justify-content: center;
                <li><a href="test.php">Advance Option</a></li>
             </ul>
         </div>
-        <div class="container">
+    </header>
+         <div class="container">
             <ul class="navbar2">
-                <li><a href="home.php">1st Year</a></li>
-                <li><a href="year2.php">2nd Year </a></li>
-                <li><a href="year3.php">3rd Year</a></li>
+            <li><a href="home.php">1st Year</a></li>
+               <li><a href="year2.php">2nd Year </a></li>
+               <li><a href="year3.php">3rd Year</a></li>
+               
             </ul>
             
             <div class="search-box">
-                <form action="" method="POST">
-      <button class="btn-search" name="search"><i class="fas fa-search"></i><svg viewBox="0 0 512 512" width="100" title="search">
-        <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-      </svg></button>
-      <input type="text" name="search_box" class="input-search" placeholder="Type to Search...">
+      <form action="" method="POST">
+            <button class="btn-search" name="search"><i class="fas fa-search"></i><svg viewBox="0 0 512 512" width="100" title="search">
+                <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+            </svg></button>
+        <input type="text" name="search_box" class="input-search" placeholder="Type to Search...">
       </form>
-     </div>
+    </div>
+         </div>
     </header>
     <div class="container" style="background-color: whitesmoke;">
     <table class="content-table">
@@ -105,7 +108,7 @@ justify-content: center;
 
 if(isset($_POST['search'])){
     $box=$_POST['search_box'];
-  $query =" SELECT * from final_year_students where Board_Roll_No like '%$box%' or email like '%$box%' or mobile like '%$box%' or first_name like '%$box%' or last_name like '%$box%' or father_name like '%$box%' or branch like '%$box%' or status like '%$box%' or sem like '%$box%' ORDER BY Sr_No ASC ";
+  $query =" SELECT * from final_year_students where Board_Roll_No like '%$box%' or email like '%$box%' or mobile like '%$box%' or first_name like '%$box%' or last_name like '%$box%' or father_name like '%$box%' or branch like '%$box%' or status like '%$box%' or sem like '%$box%' ORDER BY Board_Roll_No ASC ";
   $data= mysqli_query($connection,$query);
 
   $total=mysqli_num_rows($data);
@@ -140,7 +143,7 @@ if(isset($_POST['search'])){
 }
 else{
 
-    $query="SELECT * FROM final_year_students ORDER BY Sr_No ASC";
+    $query="SELECT * FROM final_year_students ORDER BY Board_Roll_No ASC";
     $data= mysqli_query($connection,$query);
     
     $total=mysqli_num_rows($data);

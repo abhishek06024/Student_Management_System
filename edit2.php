@@ -22,6 +22,114 @@ $branch=$_GET['branch'];
 $stats=$_GET['status'];
 $sem=$_GET['sem'];
 
+/*  This page code is kind of sililar like edit.php some of the javascript function and variables or table name is changed  */
+if ($stats === "Stuck Off") {
+    //when user select migrated in edit section
+    
+    $date1 = strtr($_REQUEST['sdate'], '/', '-');
+
+    $dquery = "INSERT INTO `second_year_stuckoff_students`(Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,stuckOff_date)VALUES('$board','$email','$mobile','$first','$last','$father','$branch','$stats','$sem','$date1')";
+
+    $dquerycheck = mysqli_query($connection, $dquery);
+
+
+
+    if ($dquerycheck) {
+        echo '<script type="text/javascript">alert("Your data has been inserted sucessfully")</script>';
+        header('refresh: 0.1; URL=year2.php');
+    } else {
+        echo '<script type="text/javascript">alert("Your account was not inserted pleass check your data")</script>';
+        header('refresh: 0.1; URL=year2.php');
+    }
+    
+}
+elseif ($stats === "Detained") {
+    //when user select migrated in edit section
+    
+    $date1 = strtr($_REQUEST['mdate'], '/', '-');
+
+    $dquery = "INSERT INTO `detained_students`(Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,detained_date)VALUES('$board','$email','$mobile','$first','$last','$father','$branch','$stats','$sem','$date1')";
+
+    $dquerycheck = mysqli_query($connection, $dquery);
+
+
+
+    if ($dquerycheck) {
+        echo '<script type="text/javascript">alert("Your data has been inserted sucessfully")</script>';
+        header('refresh: 0.1; URL=year2.php');
+    } else {
+        echo '<script type="text/javascript">alert("Your account was not inserted pleass check your data")</script>';
+        header('refresh: 0.1; URL=year2.php');
+    }
+    
+}
+
+elseif ($stats === "Migrated") {
+    //when user select migrated in edit section
+    $migrate = $_GET['migrt'];
+    $date1 = strtr($_REQUEST['mdate'], '/', '-');
+
+    if ($sem === "1st" || $sem === "2nd") {
+
+
+
+        $check = "INSERT INTO `first_year_migrated_students`(Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,migrated_collage,migration_date)VALUES('$board','$email','$mobile','$first','$last','$father','$branch','$stats','$sem','$migrate','$date1')";
+
+        $execute2 = mysqli_query($connection, $check);
+
+
+
+        if ($execute2) {
+            echo '<script type="text/javascript">alert("Your data has been inserted sucessfully")</script>';
+            header('refresh: 0.1; URL=year2.php');
+        } else {
+            echo '<script type="text/javascript">alert("Your account was not inserted pleass check your data")</script>';
+            header('refresh: 0.1; URL=year2.php');
+        }
+    }
+
+    elseif ($sem === "3rd" || $sem === "4th") {
+
+
+
+        $check = "INSERT INTO `second_year_migrated_students`(Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,migrated_collage,migration_date)VALUES('$board','$email','$mobile','$first','$last','$father','$branch','$stats','$sem','$migrate','$date1')";
+
+        $execute2 = mysqli_query($connection, $check);
+
+
+
+        if ($execute2) {
+            echo '<script type="text/javascript">alert("Your data has been inserted sucessfully")</script>';
+            header('refresh: 0.1; URL=year2.php');
+        } else {
+            echo '<script type="text/javascript">alert("Your account was not inserted pleass check your data")</script>';
+            header('refresh: 0.1; URL=year2.php');
+        }
+    }
+
+    elseif($sem === "5th" || $sem === "6th") {
+
+
+
+        $check = "INSERT INTO `final_year_migrated_students`(Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,migrated_collage,migration_date)VALUES('$board','$email','$mobile','$first','$last','$father','$branch','$stats','$sem','$migrate','$date1')";
+
+        $execute2 = mysqli_query($connection, $check);
+
+
+
+        if ($execute2) {
+            echo '<script type="text/javascript">alert("Your data has been inserted sucessfully")</script>';
+            header('refresh: 0.1; URL=year2.php');
+        } else {
+            echo '<script type="text/javascript">alert("Your account was not inserted pleass check your data")</script>';
+            header('refresh: 0.1; URL=year2.php');
+        }
+    }
+    
+
+}
+
+else{
 $query= "UPDATE `second_year_students` SET Board_Roll_No='$board',email='$email',mobile='$mobile',first_name='$first',last_name='$last',father_name='$father',branch='$branch',status='$stats',sem='$sem' WHERE  Board_Roll_No='$board' OR email='$email' OR mobile='$mobile' ";
 $run=mysqli_query($connection,$query);
 if ($run) {
@@ -32,7 +140,8 @@ else {
     
     echo '<script type="text/javascript">alert("Faild to update record in Second Year Database")</script>';
     header('refresh: 0.1; URL=year2.php');
-}
+     }
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -114,12 +223,13 @@ else {
                 <option value="Electrical"<?php if($branch == 'Electrical'){ echo "selected"; } ?>>Electrical</option>
              </select>
           </div>
-          <div class="form-group">
+          <div class="form-group" id="st">
           <label for="status"><h3>Student Current Status:</h3></label>
-             <select name="status" id="status">
+             <select name="status" id="status" onchange="chedit2();">
                 <option value="Active" <?php if($status == 'Active'){ echo "selected"; } ?>>Active</option>
-                <option value="Stuck_off" <?php if($status == 'Stuck_off'){ echo "selected"; } ?>>Stuck off</option>
-                
+                <option value="Stuck off" id="st2" >Stuck off</option>
+                <option id="m2" value="Migrated">Migrated</option>
+                <option id="dt2" value="Detained">Detained</option>
              </select>
         </div>
         <div class="form-group">
@@ -145,5 +255,6 @@ else {
   </div>
   </form>
 </div>
+<script src="js/func.js"></script>
 </body>
 </html>

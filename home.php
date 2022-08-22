@@ -26,6 +26,26 @@ require 'connection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
+
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"> -->
+
     <link rel="stylesheet" href="css/hom.css">
     <link rel="stylesheet" href="css/hom2.css">
     <link rel="stylesheet" href="css/search.css">
@@ -112,7 +132,7 @@ justify-content: center;
 if(isset($_POST['search'])){
     
     $box=$_POST['search_box'];
-  $query =" SELECT * from first_year_students where Board_Roll_No like '%$box%' or email like '%$box%' or mobile like '%$box%' or first_name like '%$box%' or last_name like '%$box%' or father_name like '%$box%' or branch like '%$box%' or status like '%$box%' or sem like '%$box%' order by Sr_No ASC";
+  $query =" SELECT * from first_year_students where Board_Roll_No like '%$box%' or email like '%$box%' or mobile like '%$box%' or first_name like '%$box%' or last_name like '%$box%' or father_name like '%$box%' or branch like '%$box%' or status like '%$box%' or sem like '%$box%' order by Board_Roll_No ASC";
 //$query =" SELECT * from first_year_students where Board_Roll_No like '%$box%' or email";
 
 // $query=" SELECT * FROM first_year_students WHERE Board_Roll_No like '%".$box."%' or email like '%$box%'  "; 
@@ -153,7 +173,7 @@ if(isset($_POST['search'])){
 
   else
      {
-    $query1="SELECT * FROM first_year_students  ORDER BY Sr_No ASC";
+    $query1="SELECT * FROM first_year_students  ORDER BY Board_Roll_No ASC";
     $data1= mysqli_query($connection,$query1);
     
     $total1=mysqli_num_rows($data1);

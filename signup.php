@@ -22,7 +22,7 @@
 <body>
     
 <div class="containers">
-  <form action="reg.php" method="post">
+  <form action="reg.php" method="post" enctype="multipart/form-data">
     <div class="container">
       <h1>Sign Up Form</h1>
       <h2>Please enter your details correctly</h2>
@@ -62,6 +62,11 @@
             <div class="gender">
               <label for="" id="female">Female
                   <input type="radio" name="gender" id="female" value="Female" required>
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="" id="female">Upload passport size photo
+                 <input type="file" name="img" >
               </label>
             </div>
             

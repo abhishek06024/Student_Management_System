@@ -1,0 +1,118 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+        body{
+           font-family: 'Fredoka', sans-serif;
+           background: url('images/img2.png');
+           /* background-repeat: no-repeat; */
+           /* background-size: vh; */
+   }
+
+   
+   .btn {
+    font-family: 'Fredoka', sans-serif;
+    margin: 0px 9px;
+    background-color: rgba(33, 252, 4, 0.774);
+    color: rgb(10, 10, 10);
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+   
+    
+
+   }
+
+.btn:hover {
+    background-color: rgb(11, 49, 14);
+}
+
+.container {
+    border: 2px solid white;
+    margin: 63px 80px;
+    padding: 75px;
+    width: fit-content;
+    border-radius: 28px;
+    
+}
+
+.form-group input {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 8px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container button {
+    display: block;
+    width: 74%;
+    margin: 20px auto;
+}
+
+.containers{
+    display:flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: fit-content;
+    flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+h1{
+    color: whitesmoke;;
+}
+h2{
+    color: whitesmoke;
+    
+}
+
+ h3{
+    color: whitesmoke;
+    display: inline;
+    font-size: 1.15rem;
+    /* font-weight: bold; */
+}
+
+.form-group{
+    color: whitesmoke;
+}
+
+
+
+.form-group select {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    /* display: block; */
+    /* width: 12em; */
+    width: fit-content;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 11px auto;
+    font-size: 23px;
+    border-radius: 8px;
+}
+
+#migrate{
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    font-size: 23px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+
+}
+
+#migrate:hover{
+    background-color: blueviolet;
+}

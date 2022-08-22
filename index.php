@@ -12,6 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
     <link rel="stylesheet" href="css/style.css">
     <!-- <script src="js/func.js"></script> -->
     <style>
@@ -56,24 +57,25 @@ else {
         $email=$_POST['email'];
         $password=$_POST['password'];
 
-        $email_search= "SELECT * FROM `teachers` WHERE EMAIL = '$email' ";
+        $email_search= "SELECT * FROM `teachers` WHERE email = '$email' ";
         $execut=mysqli_query($connection,$email_search);
 
-        $email_count = $execut->num_rows;
+        $email_count = mysqli_num_rows($execut);
         
         if ($email_count) {
-            $_SESSION['uname']=$email;//session variable
             $email_pass = mysqli_fetch_assoc($execut);
-            $db_pass = $email_pass['password'];
-            $pass_decode = password_verify($password, $db_pass);
+            $user_pass = $email_pass['password'];
+            $_SESSION['uname']=$email_pass['email'];//session variable
+            $pass_decode = password_verify($password, $user_pass);
             
             
-            if ($db_pass) {
+            
+            if ($pass_decode) {
                 echo '<script type="text/javascript">alert("login sucessfully")</script>';
                 header('refresh: 0.1; URL=home.php');
             }
             else {
-                echo '<script type="text/javascript">alert("Password incorrect")</script>';
+                echo '<script type="text/javascript">alert("Incorrect Password")</script>';
                  header('refresh: 0.1; URL=index.php');
                 
             }
@@ -105,7 +107,7 @@ else {
         <button class="button-64" role="button" type="submit" name="submit"><span class="text">Sign in</span></button>
        </div>
        <div id="text1">
-           <a href="signup.php">Create an account</a>
+           <a href="adminLogin.php">Admin Login</a>
        </div>
    </div>
    </form>

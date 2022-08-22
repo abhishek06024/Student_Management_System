@@ -90,12 +90,13 @@ justify-content: center;
     <thead>
         <tr>
             <th>Sr. No</th>
+            <th>Photo</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
             <th>Mobile</th>
             <th>Designation</th>
-            <th>epartment</th>
+            <th>Department</th>
             <th>Gender</th>
             <!-- <th colspan="2">Operations</th> -->
         </tr>
@@ -108,10 +109,12 @@ justify-content: center;
     // echo $result['Sr_No']."".$result['Board_Roll_No']."".$result['email']."".$result['mobile']."".$result['first_name']."".$result['last_name']."".$result['father_name']."".$result['branch']."".$result['status'].$result['sem'];
     if($total!=0)
     {
+        $count=1;
         while ($result=mysqli_fetch_assoc($data)) {
             echo"
             <tr>
-            <td>".$result['Sr_no']."</td>
+            <td>$count</td>
+            <td><img src ='".$result['tec_image']."' height='100px' width='100px'></td>
             <td>".$result['first_name']."</td>
             <td>".$result['last_name']."</td>
             <td>".$result['email']."</td>
@@ -122,6 +125,8 @@ justify-content: center;
             
            </tr>
             ";
+
+            $count++;
         }
     }
     else{
