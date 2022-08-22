@@ -1,0 +1,30 @@
+
+.mid {
+    display: block;
+    width: 44rem;
+    margin: 15px auto;
+    
+}
+
+  .navbar {
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar li a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    text-decoration: underline;
+    color: rgb(250, 186, 65);
+
+} 

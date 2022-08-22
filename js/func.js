@@ -75,3 +75,14 @@ let elmClass= document.getElementsByClassName("container");
 // elmClass[0].style.background = "yellow";
 elmClass[0].classList.add("bg-primary");
 
+
+function migrat() {
+    
+    var select = document.getElementById('status');
+var value = select.options[select.selectedIndex].value;
+    
+    if(value=="Migrated"){
+    document.getElementById("stat").innerHTML += 
+              " <div class='form-group'><input type='text' name='migrt' placeholder='Student migrated to' required> </div>";
+    }
+}

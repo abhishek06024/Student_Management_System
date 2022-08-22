@@ -1,0 +1,87 @@
+
+.container{
+    border: 2px solid black;
+    margin-bottom: 2px;
+    border-radius: 35px;
+}
+
+.mid {
+    display: block;
+    width: 44rem;
+    margin: 15px auto;
+    
+}
+
+  .navbar2 {
+    display: inline-block;
+}
+
+.navbar2 li {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar2 li a {
+    color: black;
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.navbar2 li a:hover,
+.navbar2 li a.active {
+    text-decoration: underline;
+    color: #05386b;
+    /* color: rgb(250, 186, 65); */
+
+} 
+
+#options{
+    border: 2px solid black;
+}
+
+/* td a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: rgb(252, 5, 5);
+    color: black;
+    padding: 0.6em 1.5em;
+    border-radius: 20px;
+} */
+
+/* td a :hover{
+    background-color: pink;
+} */
+
+#del{
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    /* width: 69px; */
+    font-size: 13px;
+    /* height: 35px; */
+    border-radius: 15px;
+}
+
+#del:hover,
+#del:focus{
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid;
+    box-shadow: 2.5px 2.5px 20px 10px red;
+}
+
+#edit{
+    background-color: rgb(0, 189, 73);
+    color: rgb(0, 0, 0);
+    /* width: 69px; */
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 15px;
+}
+#edit:hover{
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid;
+    box-shadow: 2.5px 2.5px 20px 10px rgb(0, 189, 73);
+}
