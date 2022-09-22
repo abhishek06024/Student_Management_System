@@ -65,6 +65,7 @@ else {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Record</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/add.css">
     <style>

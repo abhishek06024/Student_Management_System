@@ -13,14 +13,14 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- <script src="js/func.js"></script> -->
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
      body{
         font-family: 'Fredoka', sans-serif;
-        background: url('images/img1.jpg');
+        /* background: url('images/img1.jpg'); */
         /* background-repeat: no-repeat; */
         /* background-size: vh; */
 }
@@ -94,7 +94,7 @@ else {
 }
 
 ?>
-    <form action="#" method="POST">
+    <!-- <form action="#" method="POST">
    <div class="container">
        <div id="email">
            <input type="email" name="email" placeholder="Enter your admin id " required>
@@ -109,7 +109,43 @@ else {
            <a href="../index.php">Back to Teacher Login</a>
        </div>
    </div>
-   </form>
+   </form> -->
+
+   <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="container">
+            <div class="screen">
+                <div class="screen__content">
+                    <form class="login">
+                        <div class="login__field">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="email" name="eamil" class="login__input" placeholder="User name / Email">
+                        </div>
+                        <div class="login__field">
+                            <i class="login__icon fas fa-lock"></i>
+                            <input type="password" name="password" class="login__input" placeholder="Password">
+                        </div>
+                        <button name="submit" class="button login__submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                        </button>				
+                    </form>
+                  
+                </div>
+                <div class="screen__background">
+                    <span class="screen__background__shape screen__background__shape4"></span>
+                    <span class="screen__background__shape screen__background__shape3"></span>		
+                    <span class="screen__background__shape screen__background__shape2"></span>
+                    <span class="screen__background__shape screen__background__shape1"></span>
+                </div>	
+            </div>
+
+            <a href="../index.php" id="tech">Teacher Login</a>	
+        </div>
+    
+    </section>
 
     <script src="js/func.js"></script>
     </body>

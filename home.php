@@ -49,6 +49,25 @@ require 'connection.php';
     <link rel="stylesheet" href="css/hom.css">
     <link rel="stylesheet" href="css/hom2.css">
     <link rel="stylesheet" href="css/search.css">
+    <!-- <link rel="stylesheet" href="css/loading.css"> -->
+    <link rel="stylesheet" href="css/style55.css">
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(window).on('load',function(){
+            $("tbody").hide();
+            $("thead").hide();
+            // $(".navbar").hide();
+            // $(".header").hide();
+            // $("#load").show();
+    
+            $("#load"). fadeOut(5000);
+            $("tbody").show(6000);
+            $("thead").show(5500);
+        //     $(".navbar").show(5500);
+        //     $(".header").show(5500);
+        });
+    </script>
     <style>
 
       
@@ -81,6 +100,51 @@ justify-content: center;
     </style>
 </head>
 <body>
+    
+    <div id="load">
+        
+         <div class="center" >
+        <div class="large">
+            <div class="medium">
+                <div class="small">
+                    <div class="dot">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>LOADING...</h1>
+    </div>
+    
+<!-- <section id="load" class="<?php //if($loginPage) echo "show";?>> -->
+        <!-- <svg>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" 
+                stdDeviatoin="10"/>
+                <feColorMatrix values="
+                   1 0 0 0 0
+                   0 1 0 0 0
+                   0 0 1 0 0
+                   0 0 0 20 -10
+                "></feColorMatrix>   
+            </filter>
+        </svg>
+        <div class="loader"> -->
+            <!-- <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span> -->
+            <!-- <span class="rotate" style="--j:0;"></span>
+            <span class="rotate" style="--j:1;"></span>
+            <span class="rotate" style="--j:2;"></span>
+            <span class="rotate" style="--j:3;"></span>
+            <span class="rotate" style="--j:4;"></span>
+        </div>
+    </section> --> -->
+</div>
     <header class="header">
         <div class="mid">
             <ul class="navbar">
@@ -100,7 +164,7 @@ justify-content: center;
                
             </ul>
             
-            <div class="search-box">
+            <div class="search-box" id="se">
       <form action="" method="POST">
             <button class="btn-search" name="search"><i class="fas fa-search"></i><svg viewBox="0 0 512 512" width="100" title="search">
                 <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
@@ -213,6 +277,19 @@ if(isset($_POST['search'])){
     {
         return confirm('Are you sure want to delete');
     }
+
+    $('body').append("");
+$(window).on('load', function(){
+  setTimeout(removeLoader, 6500); //wait for page load PLUS two seconds.
+});
+function removeLoader(){
+    $( "#loadingDiv" ).fadeOut(500, function() {
+      // fadeOut complete. Remove the loading div
+      $( "#loadingDiv" ).remove(); //makes page more lightweight 
+  });  
+}
+
+
 </script>
 </div>
     

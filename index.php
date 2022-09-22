@@ -13,16 +13,19 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style22.css">
     <!-- <script src="js/func.js"></script> -->
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
      body{
         font-family: 'Fredoka', sans-serif;
-        background: url('images/triangle.png');
-        /* background-repeat: no-repeat; */
-        /* background-size: vh; */
+        /* background: url('images/collage.jpg');
+        background-repeat: no-repeat;
+        background-size: 118%;
+        z-index: 1; */
+        
 }
 
     </style>
@@ -95,7 +98,10 @@ else {
 }
 
 ?>
-    <form action="index.php" method="POST">
+    <!-- <div class="w">
+        <div id="dd">
+    <div id="f" style="position: relative;  z-index: 7;">
+    <form action="index.php" method="POST" >
    <div class="container">
        <div id="email">
            <input type="email" name="email" placeholder="Enter your user id " required>
@@ -111,6 +117,42 @@ else {
        </div>
    </div>
    </form>
+   </div>
+   </div>
+   </div> -->
+
+   <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+        
+        <div class="container">
+            <div class="form" >
+                <h2>Teacher Login</h2>
+                <form action="index.php" method="POST">
+                <div class="inputBox">
+                    <input type="email" name="email" placeholder="Username" require>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" placeholder="Password" require>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="submit" value="Login">
+                </div>
+                <p class="forget"><a href="admin/adminLogin.php">Admin Login </a></p>
+            </form>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+  
 
     <script src="js/func.js"></script>
     </body>

@@ -94,7 +94,7 @@ else {
 }
 
 ?>
-    <form action="index.php" method="POST">
+    <!-- <form action="index.php" method="POST">
    <div class="container">
        <div id="email">
            <input type="email" name="email" placeholder="Enter your admin id " required>
@@ -109,7 +109,9 @@ else {
            <a href="index.php">Back to Teacher Login</a>
        </div>
    </div>
-   </form>
+   </form> -->
+
+   
 
     <script src="js/func.js"></script>
     </body>

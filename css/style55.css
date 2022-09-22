@@ -1,0 +1,96 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url("collage.jpg");
+    background-repeat: no-repeat;
+    background-size: 80rem;
+       
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.dot
+{
+    width: 10px;
+    height: 10px;
+    background: #f00;
+    border-radius: 50%;
+}
+.small
+{
+    padding: 10px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 4px solid #ffff00;
+    border-left: 4px solid #ffff00;
+    border-radius: 50%;
+    animation: small 1s linear infinite;
+}
+.medium
+{
+    padding: 10px;
+    border-top: 4px solid #02fc0a;
+    border-right: 4px solid #02fc0a;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-radius: 50%;
+    animation: medium 1s linear infinite;
+}
+.large
+{
+    padding: 10px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 4px solid #0307fa;
+    border-left: 4px solid #0307fa;
+    border-radius: 50%;
+    animation: large 1s linear infinite;
+}
+@keyframes small
+{
+    0%
+    {
+        transform: rotate(720deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+@keyframes medium
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(720deg);
+    }
+}
+@keyframes large
+{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+h1{
+    position:absolute;
+    left: -15%;
+    font-family: cursive;
+    /* font-weight: bold; */
+    font-size: 25px;
+    color: #262626;
+}
+
