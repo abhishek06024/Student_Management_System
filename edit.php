@@ -267,6 +267,9 @@ if (isset($_GET['update'])) {
                            
                             <option id="m" value="Migrated">Migrated</option>
                             <option id="dt" value="Detained">Detained</option>
+                            <option value="Passout" id="st"<?php if ($status === 'Passout') {
+                                                            echo "selected";
+                                                        } ?>>Stuck off</option>
 
                         </select>
                     </div>

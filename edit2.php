@@ -154,6 +154,7 @@ else {
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
     <link rel="stylesheet" href="css/style3.css">
     <link rel="stylesheet" href="css/add.css">
+    <link rel="stylesheet" href="css/nav2.css">
     <style>
 
       
@@ -173,11 +174,50 @@ else {
     ?>
 <header class="header">
         <div class="mid">
-            <ul class="navbar">
+            <ul    l class="navbar">
                <li><a href="home.php">Student Record</a></li>
                <li><a href="teacher.php">Teacher Record</a></li>
-               <li><a href="add_data.php">Edit Record</a></li>
+               <li><a href="data.php">Add Record</a></li>
+               <li><a href="logout.php">Logout</a></li>
+               <li><a href="test.php">Advance Option</a></li>
             </ul>
+        </div>
+    
+        <header class="primary-header">
+        <div class="container">
+            <div class="nav-wraper">
+            <a href="#"><img src="vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
+            <button class="mobile-nav" aria-controls="primary-nav" aria-expanded="false">
+                <img class="menu-open" src="menu-open.svg" alt="" aria-hidden="true">
+                <img class="menu-close" src="menu-close.svg" alt="" aria-hidden="true">
+                <span class="visually-hidden">Menu</span>
+            </button>
+            <nav class="primary-nav" id="primary-nav" >
+                <ul arial-label="primary" role="list" class="nav-list" style="list-style: none;" >
+                    <li><a href="#">Home</a></li>
+                    <li id="dropdown"><a href="#">Student Details</a>
+                    <ul class="option">
+                        <li><a href="#">1st Year Students </a></li>
+                        <li><a href="#">2nd Year Students </a></li>
+                        <li><a href="#">Final Year Students </a></li>
+                        <li><a href="#">Passout Students </a></li>
+                    </ul></li>
+                    <li><a href="#">Teacher Details</a></li>
+                    <li><a href="#">Advance Option</a></li>
+                    <li id="log-out"><a href="#">Sign In</a></li>
+                </ul>
+                <div id="serch"><form action="" method="POST">
+                    <button class="btn-search" name="search"><i class="fas fa-search"></i><svg viewBox="0 0 512 512" width="100" title="search">
+                        <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg></button>
+                <input type="text" name="search_box" class="input-search" placeholder="Type to Search...">
+              </form></div>
+                <a href="#" id="profifa-pull-left" class="button | display-sm-none display-md-inline-flex"><img src="namicon.png" alt="User"  class="uu" ></a>
+                <div class="user" id="show" style="display: none ;" >
+                    <a href="#">Sign In</a> 
+                </div>
+            </nav>
+         </div>
         </div>
     </header>
 <div class="containers">
@@ -257,5 +297,26 @@ else {
   </form>
 </div>
 <script src="js/func.js"></script>
+<script src="nav.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            var applied =false;
+            $(".uu").click(function(){
+                    if (!applied) {
+            $(".user").css("display","flex");
+            applied = true;
+        } 
+        else {
+                
+            $(".user").hide();
+            
+            applied = false;
+            }
+        });
+        });
+            
+
+    </script>
 </body>
 </html>

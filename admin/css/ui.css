@@ -1,0 +1,138 @@
+:root {
+  --gradient: linear-gradient(
+    45deg #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
+}
+.message {
+  background-image: linear-gradient(
+    to right,
+    rgb(13, 254, 65) 18%,
+    rgb(133, 255, 159)
+  );
+  font-size: 2em;
+}
+
+body {
+  /* border: 2px solid violet;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 2fr); */
+  /* width: 100vw; */
+  /* height: 35rem; */
+  /* background-image: linear-gradient( 45deg, #845ec2,#d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871 ); */
+  background-image: linear-gradient(
+    155deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
+}
+
+/* css for cards/ui */
+
+.cards {
+  display: grid;
+  grid-gap: 3rem;
+  /* grid-template-columns: repeat(3, 0.3fr); */
+  grid-template-columns: 0.3fr 0.3fr 0.3fr;
+  /* grid-template-rows: 18.8em; */
+  grid-template-columns: repeat(auto-fit, minmax(18.8em, 0.3fr));
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 18.8em;
+  /* width: 300px; */
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid rgb(163, 242, 84);
+  border-radius: 3%;
+  overflow: hidden;
+  transition: 0.7s;
+  /* grid-area: card; */
+}
+
+/* .cards :nth-child(4)
+{
+    border: 2.5px solid rgb(237, 84, 242); 
+}
+.cards :nth-child(5)
+{
+    border: 2.5px solid rgb(237, 84, 242); 
+}
+.cards :nth-child(6)
+{
+    border: 2.5px solid rgb(237, 84, 242); 
+} */
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #448ee4 40%, #00008b 100%);
+}
+
+.content h2 {
+  /* display: inline-block; */
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.content p {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+.img {
+  overflow: hidden;
+}
+
+.img img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem 0rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}

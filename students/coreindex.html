@@ -5,34 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/nav2.css">
-    <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/ui.css">
-    
+    <link rel="stylesheet" href="nav2.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="ui.css">
 </head>
 <body>
-<header class="primary-header">
+    <header class="primary-header">
         <div class="container">
             <div class="nav-wraper">
-            <a href="#"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
+            <a href="#"><img src="vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
             <button class="mobile-nav" aria-controls="primary-nav" aria-expanded="false">
-                <img class="menu-open" src="images/menu-open.svg" alt="" aria-hidden="true">
-                <img class="menu-close" src="images/menu-close.svg" alt="" aria-hidden="true">
+                <img class="menu-open" src="menu-open.svg" alt="" aria-hidden="true">
+                <img class="menu-close" src="menu-close.svg" alt="" aria-hidden="true">
                 <span class="visually-hidden">Menu</span>
             </button>
             <nav class="primary-nav" id="primary-nav" >
                 <ul arial-label="primary" role="list" class="nav-list" style="list-style: none;" >
                     <li><a href="#">Home</a></li>
-                    <li id="dropdown"><a href="../index.php">Student Details</a>
+                    <li id="dropdown"><a href="#">Student Details</a>
                     <ul class="option">
-                        <li><a href="year1.php">1st Year Students </a></li>
-                        <li><a href="year2.php">2nd Year Students </a></li>
-                        <li><a href="year3.php">Final Year Students </a></li>
-                        <li><a href="passout.php">Passout Students </a></li>
+                        <li><a href="#">1st Year Students </a></li>
+                        <li><a href="#">2nd Year Students </a></li>
+                        <li><a href="#">Final Year Students </a></li>
+                        <li><a href="#">Passout Students </a></li>
                     </ul></li>
-                    <li><a href="teacher.php">Teacher Details</a></li>
-                    <li><a href="advance.php">Advance Option</a></li>
-                    
+                    <li><a href="#">Teacher Details</a></li>
+                    <li><a href="#">Advance Option</a></li>
+                    <li id="log-out"><a href="#">Sign In</a></li>
                 </ul>
                 <div id="serch"><form action="" method="POST">
                     <button class="btn-search" name="search"><i class="fas fa-search"></i><svg viewBox="0 0 512 512" width="100" title="search">
@@ -40,9 +39,9 @@
                     </svg></button>
                 <input type="text" name="search_box" class="input-search" placeholder="Type to Search...">
               </form></div>
-                <a href="#" id="profifa-pull-left" class="button | display-sm-none display-md-inline-flex"><img src="images/namicon.png" alt="User"  class="uu" ></a>
+                <a href="#" id="profifa-pull-left" class="button | display-sm-none display-md-inline-flex"><img src="namicon.png" alt="User"  class="uu" ></a>
                 <div class="user" id="show" style="display: none ;" >
-                    <a href="teacherlogin.php">Sign In</a> 
+                    <a href="#">Sign In</a> 
                 </div>
             </nav>
          </div>
@@ -53,78 +52,78 @@
         <div class="card">
             <div class="img">
   
-                <img src="images/collage.jpg">
+                <img src="cardimg.jpg">
             </div>
             <div class="content">
                 <h2>1st Year Students</h2>
                 <p>Click hear to get the details of all the active
                     students of First Year Students</p>
-                    <a href="students/year1.php" class="btn">Get Details</a>
+                <button class="btn" type="submit">Get Details</button>
             </div>
         </div>
         <div class="card">
             <div class="img">
   
-                <img src="images/cardimg.jpg">
+                <img src="cardimg.jpg">
             </div>
             <div class="content">
                 <h2>2nd Year Students</h2>
                 <p>Click hear to get the details of all the active
                     students of Second Year Students</p>
-                    <a href="students/year2.php" class="btn">Get Details</a>            
-                </div>
+                <button class="btn" type="submit">Get Details</button>
+            </div>
         </div>
         <div class="card">
             <div class="img">
   
-                <img src="images/cardimg.jpg">
+                <img src="cardimg.jpg">
             </div>
             <div class="content">
                 <h2>Final Year Students</h2>
                 <p>Click hear to get the details of all the active
                     students of Final Year Students</p>
-                    <a href="students/year3.php" class="btn">Get Details</a>
+                <button class="btn" type="submit">Get Details</button>
             </div>
         </div>
         <div class="card">
             <div class="img">
   
-                <img src="images/cardimg.jpg">
+                <img src="cardimg.jpg">
             </div>
             <div class="content">
                 <h2>Detained Students</h2>
                 <p>Click hear to get the details of all the Detained
                     Students</p>
-                    <a href="students/detained.php" class="btn">Get Details</a>
+                <button class="btn" type="submit">Get Details</button>
             </div>
         </div>
-        <!-- <div class="card">
+        <div class="card">
             <div class="img">
   
-                <img src="images/cardimg.jpg">
+                <img src="cardimg.jpg">
             </div>
             <div class="content">
                 <h2>Migrated Students</h2>
                 <p>Click hear to get the details of all the Migrated Students</p>
-                <a href="students/migrated.php" class="btn">Get Details</a>
+                <button class="btn" type="submit">Get Details</button>
             </div>
-        </div> -->
+        </div>
         <div class="card">
             <div class="img">
   
-                <img src="images/cardimg.jpg">
+                <img src="cardimg.jpg">
             </div>
             <div class="content">
                 <h2>Pass Out Students</h2>
                 <p>Click hear to get the details of all the pass out
                     students from Final Year Students</p>
-                    <a href="students/passout.php" class="btn">Get Details</a>
+                <button class="btn" type="submit">Get Details</button>
             </div>
         </div>
     </div>
 
-    <script src="js/nav.js"></script>
-    <script src="js/jquery-3.6.0.js"></script>
+    <script src="nav.js"></script>
+    <script src="jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
             var applied =false;

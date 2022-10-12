@@ -206,7 +206,7 @@ function chedit2() {
 
         else if (value == "Stuck off") {
 
-            stdet.setAttribute("selected","");
+            // stdet.setAttribute("selected","");
             // console.log(update);
             if(document.getElementById("st") != null){
             document.getElementById("st").innerHTML += "<div> <input type='date' name='sdate'> </div>";

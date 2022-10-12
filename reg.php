@@ -25,25 +25,25 @@ if(!$connection)
 }
 else {
 
-    // if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         
-    //     $filename =$_FILES["img"]["name"];
-    //     $tempname =$_FILES["img"]["tmp_name"];
-    //     $folder="images/teachers/".$filename;
-    //     move_uploaded_file($tempname, $folder);
+        $filename =$_FILES["img"]["name"];
+        $tempname =$_FILES["img"]["tmp_name"];
+        $folder="images/teachers/".$filename;
+        move_uploaded_file($tempname, $folder);
 
 
-    //     $first_name=test_input($_POST['first_name']);
-    //     if(empty($first_name))
-    //     {
-    //         echo '<script type="text/javascript">alert("Please enter your first name")</script>';
-    //         header('refresh: 0.1; URL=signup.php'); 
-    //     }
-    //     else {
-    //             if(!preg_match("/^[a-zA-Z-' ]*$/",$first_name))
-    //             {
-    //                 echo '<script type="text/javascript">alert("Only letters and white space allowed in name")</script>';
+        $first_name=test_input($_POST['first_name']);
+        if(empty($first_name))
+        {
+            echo '<script type="text/javascript">alert("Please enter your first name")</script>';
+            header('refresh: 0.1; URL=signup.php'); 
+        }
+        else {
+                if(!preg_match("/^[a-zA-Z-' ]*$/",$first_name))
+                {
+                    echo '<script type="text/javascript">alert("Only letters and white space allowed in name")</script>';
                 }
         }
         $last_name=test_input($_POST['last_name']);
@@ -144,7 +144,7 @@ else {
       }
         else {
             echo '<script type="text/javascript">alert("Account alrady exist")</script> ';
-            header('refresh: 0.1; URL=signup.php');
+            header('refresh: 0.1; URL=index.php');
         }
     }
     else {
