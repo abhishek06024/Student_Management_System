@@ -143,7 +143,7 @@ else {
                 </div>	
             </div>
 
-            <a href="../index.php" id="tech">Teacher Login</a>	
+            <a href="../teacherlogin.php" id="tech">Teacher Login</a>	
         </div>
     
     </section>

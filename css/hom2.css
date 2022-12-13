@@ -1,15 +1,15 @@
 
 .container2{
     border: 2px solid black;
-    margin-bottom: 2px;
+    /* margin-bottom: 2px; */
     border-radius: 35px;
     display: flex;
     /* flex-direction: row; */
     justify-content: center;
     align-items: center;
-    margin-top: 1.8em;
-    /* flex-wrap: wrap;
-    width: auto; */
+    width: fit-content;
+    padding: 0 22px;
+    margin: 1.8em auto;
 }
 
 

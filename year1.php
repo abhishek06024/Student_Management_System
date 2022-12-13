@@ -58,7 +58,7 @@ require 'connection.php';
       
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
      body{
-        /* font-family: 'Fredoka', sans-serif; */
+        font-family: 'Fredoka', sans-serif;
         background-image: linear-gradient( 155deg, #845ec2,#d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871 );
         /* background: url('images/back2.jpg'); */
         /* background-repeat: no-repeat; */
@@ -106,7 +106,7 @@ justify-content: center;
 <header class="primary-header">
         <div class="container">
             <div class="nav-wraper">
-            <a href="teacher.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
+            <a href="index.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
             <button class="mobile-nav" aria-controls="primary-nav" aria-expanded="false">
                 <img class="menu-open" src="images/menu-open.svg" alt="" aria-hidden="true">
                 <img class="menu-close" src="images/menu-close.svg" alt="" aria-hidden="true">

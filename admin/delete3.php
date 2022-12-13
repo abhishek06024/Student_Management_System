@@ -21,12 +21,12 @@ $data=mysqli_query($connection,$query);
     
 if ($data) {
     echo '<script type="text/javascript">alert("Record has been deleted from Third Year Database")</script>';
-    header('refresh: 0.1; URL=year2.php');
+    header('refresh: 0.1; URL=year3.php');
 }
 else {
     
     echo '<script type="text/javascript">alert("Faild to deleted from Third Year Database")</script>';
-    header('refresh: 0.1; URL=year2.php');
+    header('refresh: 0.1; URL=year3.php');
 }
 
 

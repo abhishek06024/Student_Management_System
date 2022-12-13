@@ -21,11 +21,11 @@ require 'connection.php';
     </head>
 <body style="background-image: linear-gradient( 155deg, #845ec2,#d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871 );">
     
-   
+            
 <header class="primary-header">
         <div class="container">
             <div class="nav-wraper">
-            <a href="teacher.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
+            <a href="home.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
             <button class="mobile-nav" aria-controls="primary-nav" aria-expanded="false">
                 <img class="menu-open" src="images/menu-open.svg" alt="" aria-hidden="true">
                 <img class="menu-close" src="images/menu-close.svg" alt="" aria-hidden="true">
@@ -33,15 +33,15 @@ require 'connection.php';
             </button>
             <nav class="primary-nav" id="primary-nav" >
                 <ul arial-label="primary" role="list" class="nav-list" style="list-style: none;" >
-                    <li><a href="index.php">Home</a></li>
-                    <li id="dropdown"><a href="year1.php">Student Details</a>
+                    <li><a href="home.php">Home</a></li>
+                    <li id="dropdown"><a href="../index.php">Student Details</a>
                     <ul class="option">
-                        <li><a href="year1.php">1st Year Students </a></li>
+                        <li><a href="home.php">1st Year Students </a></li>
                         <li><a href="year2.php">2nd Year Students </a></li>
                         <li><a href="year3.php">Final Year Students </a></li>
                         <li><a href="passout.php">Passout Students </a></li>
                     </ul></li>
-                    <li><a href="teacher.php">Teacher Details</a></li>
+                    <li><a href="teacher2.php">Teacher Details</a></li>
                     <li><a href="advance.php">Advance Option</a></li>
                     
                 </ul>
@@ -52,8 +52,8 @@ require 'connection.php';
                 <input type="text" name="search_box" class="input-search" placeholder="Type to Search...">
               </form></div>
               <a href="#" id="profifa-pull-left" class="button | display-sm-none display-md-inline-flex"><?php  
-                $email=$_SESSION['uname'];
-                $query3="select * from teachers where email='$email' ";
+                $email=$_SESSION['admin_uname'];
+                $query3="select * from admin where email='$email' ";
                 $data3= mysqli_query($connection,$query3);
                 $total3=mysqli_num_rows($data3);
                 // print_r($total3);
@@ -63,10 +63,10 @@ require 'connection.php';
     {
         
         while ($result=mysqli_fetch_assoc($data3)) {
-                // print_r($result['tec_image']);
+                // print_r($result['admin_image']);
                 // die();
             echo"
-            <img src ='".$result['tec_image']."' height='100px' width='100px' alt='User'  class='uu'>
+            <img src ='".$result['admin_image']."' height='100px' width='100px' alt='User'  class='uu'>
             ";
         }
     } ?></a>
@@ -78,7 +78,7 @@ require 'connection.php';
         </div>
     </header>
 
-<div align="center">
+<div style="border: 5px solid yellow ; margin-top:1em;">
 <h3>Bulk Data upload</h3>
     <form action="upload.php" enctype="multipart/form-data" method="post"/>
         <label>Import csv file :</label>

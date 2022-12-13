@@ -47,7 +47,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(18.8em, 0.3fr));
   align-items: center;
   justify-content: center;
-  margin: 2em 0;
+  margin: 2em 15px;
   padding: 0;
 }
 

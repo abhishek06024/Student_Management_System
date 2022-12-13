@@ -28,7 +28,7 @@ require 'connection.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Teachers</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" style="border-radius: 50% ;">
     <link rel="stylesheet" href="css/hom.css">
     <link rel="stylesheet" href="css/hom2.css">
@@ -78,8 +78,8 @@ justify-content: center;
             </button>
             <nav class="primary-nav" id="primary-nav" >
                 <ul arial-label="primary" role="list" class="nav-list" style="list-style: none;" >
-                    <li><a href="#">Home</a></li>
-                    <li id="dropdown"><a href="../index.php">Student Details</a>
+                    <li><a href="index.php">Home</a></li>
+                    <li id="dropdown"><a href="year1.php">Student Details</a>
                     <ul class="option">
                         <li><a href="year1.php">1st Year Students </a></li>
                         <li><a href="year2.php">2nd Year Students </a></li>

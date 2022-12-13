@@ -58,7 +58,8 @@ require 'connection.php';
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
      body{
         font-family: 'Fredoka', sans-serif;
-        background-color: #5cdb95; 
+        background-image: linear-gradient( 155deg, #845ec2,#d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871 );
+        /* background-color: #5cdb95;  */
         /* background: url('images/back2.jpg'); */
         /* background-repeat: no-repeat; */
         /* background-size: vh; */
@@ -106,7 +107,7 @@ justify-content: center;
 <header class="primary-header">
         <div class="container">
             <div class="nav-wraper">
-            <a href="teacher.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
+            <a href="home.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
             <button class="mobile-nav" aria-controls="primary-nav" aria-expanded="false">
                 <img class="menu-open" src="images/menu-open.svg" alt="" aria-hidden="true">
                 <img class="menu-close" src="images/menu-close.svg" alt="" aria-hidden="true">
@@ -114,7 +115,7 @@ justify-content: center;
             </button>
             <nav class="primary-nav" id="primary-nav" >
                 <ul arial-label="primary" role="list" class="nav-list" style="list-style: none;" >
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home.php">Home</a></li>
                     <li id="dropdown"><a href="../index.php">Student Details</a>
                     <ul class="option">
                         <li><a href="home.php">1st Year Students </a></li>
@@ -122,7 +123,7 @@ justify-content: center;
                         <li><a href="year3.php">Final Year Students </a></li>
                         <li><a href="passout.php">Passout Students </a></li>
                     </ul></li>
-                    <li><a href="teacher.php">Teacher Details</a></li>
+                    <li><a href="teacher2.php">Teacher Details</a></li>
                     <li><a href="advance.php">Advance Option</a></li>
                     
                 </ul>

@@ -25,9 +25,10 @@ if(isset( $_FILES['csv'] )) :
           continue;
       }
       else{   
+        $colum[9]=date("Y-m-d", strtotime($colum[9]));
         $inserted=$connection->query("INSERT INTO first_year_students 
-        (Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem) 
-        values ('$colum[0]','$colum[1]','$colum[2]','$colum[3]','$colum[4]','$colum[5]','$colum[6]','$colum[7]','$colum[8]')");
+        (Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,admission_date) 
+        values ('$colum[0]','$colum[1]','$colum[2]','$colum[3]','$colum[4]','$colum[5]','$colum[6]','$colum[7]','$colum[8]','$colum[9]')");
        }
        }
       }
@@ -45,10 +46,13 @@ if(isset( $_FILES['csv'] )) :
              if($total2>0){
             continue;
                  }
-           else{      
+           else{   
+            $colum[9]=date("Y-m-d", strtotime($colum[9]));
+            // print_r($udate);
+            // die();
            $inserted=$connection->query("INSERT INTO second_year_students 
-           (Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem) 
-           values ('$colum[0]','$colum[1]','$colum[2]','$colum[3]','$colum[4]','$colum[5]','$colum[6]','$colum[7]','$colum[8]')");
+           (Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,admission_date) 
+           values ('$colum[0]','$colum[1]','$colum[2]','$colum[3]','$colum[4]','$colum[5]','$colum[6]','$colum[7]','$colum[8]','$colum[9]')");
           }
         }
 
@@ -61,23 +65,27 @@ if(isset( $_FILES['csv'] )) :
            for ($c=0; $c < $num; $c++):
              $colum[$c] = $csv_data[$c];
              $find3="SELECT * FROM final_year_students WHERE Board_Roll_No = '$colum[0]'";
-          $dat3a= mysqli_query($connection,$find3);
+          $data3= mysqli_query($connection,$find3);
           $total3=mysqli_num_rows($data3); 
            endfor; 
            if($total3>0){
             continue;
               }
            else{ 
+            $colum[9]=date("Y-m-d", strtotime($colum[9]));
            $inserted=$connection->query("INSERT INTO final_year_students 
-           (Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem) 
-           values ('$colum[0]','$colum[1]','$colum[2]','$colum[3]','$colum[4]','$colum[5]','$colum[6]','$colum[7]','$colum[8]')");
+           (Board_Roll_No,email,mobile,first_name,last_name,father_name,branch,status,sem,admission_date) 
+           values ('$colum[0]','$colum[1]','$colum[2]','$colum[3]','$colum[4]','$colum[5]','$colum[6]','$colum[7]','$colum[8]','$colum[9]')");
             }
 
           }
 
       }
-       $msg = "Data uploaded successfully.";
+       //$msg = "Data uploaded successfully.";
+       echo '<script type="text/javascript">alert("Data uploaded successfully in Database")</script>';
+       header('refresh: 0.1; URL=advance.php');
        fclose($handle);
+
     else :
       $msg = "unable to read the format try again";
     endif;

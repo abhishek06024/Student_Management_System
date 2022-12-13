@@ -30,8 +30,9 @@ require 'connection.php';
     <link rel="stylesheet" href="css/hom.css">
     <link rel="stylesheet" href="css/hom2.css">
     <link rel="stylesheet" href="css/search.css">
-    <link rel="stylesheet" href="css/nav2.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/nav2.css">
+    <link rel="stylesheet" href="css/style55.css">
     <style>
 
       
@@ -69,7 +70,7 @@ justify-content: center;
 <header class="primary-header">
         <div class="container">
             <div class="nav-wraper">
-            <a href="teacher.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
+            <a href="index.php"><img src="images/vector.png" alt="Govt. Polytechnic Paonta Sahib" id="logo"></a>
             <button class="mobile-nav" aria-controls="primary-nav" aria-expanded="false">
                 <img class="menu-open" src="images/menu-open.svg" alt="" aria-hidden="true">
                 <img class="menu-close" src="images/menu-close.svg" alt="" aria-hidden="true">
@@ -219,8 +220,8 @@ justify-content: center;
     }
 </script>
 </div>
-<script src="nav.js"></script>
-    <script src="jquery-3.6.0.js"></script>
+<script src="js/nav.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function(){
             var applied =false;

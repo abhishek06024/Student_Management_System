@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/nav2.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/ui.css">
-    
+    <style>
+
+      
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+     body{
+        font-family: 'Fredoka', sans-serif;
+        background-image: linear-gradient( 155deg, #845ec2,#d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871 );
+        /* background: url('images/back2.jpg'); */
+        /* background-repeat: no-repeat; */
+        /* background-size: vh; */
+}
+</style>
 </head>
 <body>
 <header class="primary-header">
@@ -53,7 +64,7 @@
         <div class="card">
             <div class="img">
   
-                <img src="images/collage.jpg">
+                <img src="images/cardimg.jpg">
             </div>
             <div class="content">
                 <h2>1st Year Students</h2>
